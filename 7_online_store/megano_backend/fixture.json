@@ -1,0 +1,428 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 1,
+  "fields": {
+    "title": "Электроника",
+    "image": "categories/icons/1.svg",
+    "parent": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 2,
+  "fields": {
+    "title": "Смартфоны",
+    "image": "categories/icons/8.svg",
+    "parent": 1,
+    "is_deleted": false
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Новинка"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 2,
+  "fields": {
+    "name": "Apple"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "price": "170.00",
+    "count": 1,
+    "date": "2026-10-17T22:08:04.004Z",
+    "title": "MacBook Pro M4",
+    "description": "Хорошая и мощная версия",
+    "fullDescription": "",
+    "freeDelivery": false,
+    "is_limited": false,
+    "sort_index": 0,
+    "purchases": 0,
+    "is_deleted": false,
+    "tags": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "price": "450.00",
+    "count": 2,
+    "date": "2026-10-19T18:42:05.733Z",
+    "title": "Видеокарта",
+    "description": "Видеокарта последнего поколения",
+    "fullDescription": "",
+    "freeDelivery": true,
+    "is_limited": true,
+    "sort_index": 0,
+    "purchases": 0,
+    "is_deleted": false,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "catalog.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "image": "products/images/bigGoods.png"
+  }
+},
+{
+  "model": "catalog.productimage",
+  "pk": 2,
+  "fields": {
+    "product": 2,
+    "image": "products/images/videoca.png"
+  }
+},
+{
+  "model": "catalog.specification",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "name": "Диагональ экрана",
+    "value": "14.2"
+  }
+},
+{
+  "model": "catalog.specification",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "name": "Процессор",
+    "value": "Apple M4"
+  }
+},
+{
+  "model": "catalog.specification",
+  "pk": 3,
+  "fields": {
+    "product": 1,
+    "name": "Оперативная память",
+    "value": "24"
+  }
+},
+{
+  "model": "catalog.specification",
+  "pk": 4,
+  "fields": {
+    "product": 1,
+    "name": "Процессор",
+    "value": "Apple M4"
+  }
+},
+{
+  "model": "catalog.specification",
+  "pk": 5,
+  "fields": {
+    "product": 1,
+    "name": "Оперативная память",
+    "value": "24"
+  }
+},
+{
+  "model": "catalog.specification",
+  "pk": 6,
+  "fields": {
+    "product": 2,
+    "name": "Объем видеокарты",
+    "value": "24"
+  }
+},
+{
+  "model": "catalog.specification",
+  "pk": 7,
+  "fields": {
+    "product": 2,
+    "name": "Ширина шины памяти",
+    "value": "256"
+  }
+},
+{
+  "model": "catalog.review",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "author": "Денис",
+    "email": "den_erof123@mail.ru",
+    "text": "Отличный ноутбук, очень быстрый и долго держит батарею. Рекомендую!",
+    "rate": 5,
+    "date": "2026-10-19T20:34:34.016Z"
+  }
+},
+{
+  "model": "catalog.review",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "author": "Денис",
+    "email": "den_erof123@mail.ru",
+    "text": "Отличный ноутбук, очень быстрый и долго держит батарею. Рекомендую!",
+    "rate": 5,
+    "date": "2026-10-19T20:34:34.061Z"
+  }
+},
+{
+  "model": "catalog.review",
+  "pk": 3,
+  "fields": {
+    "product": 1,
+    "author": "Анна",
+    "email": "test@test.ru",
+    "text": "Тест на новый отзыв",
+    "rate": 4,
+    "date": "2026-10-20T03:05:18.575Z"
+  }
+},
+{
+  "model": "catalog.review",
+  "pk": 4,
+  "fields": {
+    "product": 2,
+    "author": "Дмитрий",
+    "email": "dm@dm.ru",
+    "text": "Очень достойный выбор",
+    "rate": 5,
+    "date": "2026-10-21T01:41:41.908Z"
+  }
+},
+{
+  "model": "catalog.review",
+  "pk": 5,
+  "fields": {
+    "product": 1,
+    "author": "Татьяна",
+    "email": "t@t.ru",
+    "text": "Не очень понравился товар",
+    "rate": 3,
+    "date": "2026-10-21T01:43:38.672Z"
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 1,
+    "price": "170.00",
+    "count": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "product": 1,
+    "price": "170.00",
+    "count": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 3,
+    "product": 2,
+    "price": "450.00",
+    "count": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 4,
+    "product": 1,
+    "price": "170.00",
+    "count": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 5,
+    "product": 2,
+    "price": "450.00",
+    "count": 1
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$hWUhMbij6ae9MbhU8oHxxp$Lx5Nj24H+rX4Jej3jsUkUmHplBWjM3JZjPOeQUiZttM=",
+    "last_login": "2026-10-17T17:28:40.181Z",
+    "is_superuser": true,
+    "username": "Denis",
+    "first_name": "Denis",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-10-17T17:28:30.571Z",
+    "email": "den_erof123@mail.ru",
+    "phone": "89111111111",
+    "image": "user_preview/images_n0F7QoN.jpeg",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$mUA0OGw0mKo3hwm0kat0q3$5TMpEpmX4OMbTKZksqm+C6t57OFXPW5hD6ObArqNjVA=",
+    "last_login": "2026-10-21T19:36:54.206Z",
+    "is_superuser": false,
+    "username": "erofeev",
+    "first_name": "Денис",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-21T19:36:54.055Z",
+    "email": "erofeev@store.local",
+    "phone": null,
+    "image": "",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$u3r4iYM05gd8yU4dumeF4G$SayIi3ijVyOT+HUrja7xtUQ3eCHzd3KyqhqgLKGVK0s=",
+    "last_login": "2026-10-21T20:49:13.495Z",
+    "is_superuser": false,
+    "username": "erofeeva",
+    "first_name": "anna",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-21T20:31:16.541Z",
+    "email": "erofeeva@store.local",
+    "phone": null,
+    "image": "user_preview/images_sO1mKbg.jpeg",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "Denis"
+    ],
+    "createdAt": "2026-10-21T03:15:09.811Z",
+    "paymentType": "online",
+    "deliveryType": "ordinary",
+    "status": "accepted",
+    "paymentError": null,
+    "fullName": "",
+    "email": "",
+    "phone": "",
+    "city": "",
+    "address": "",
+    "totalCost": "170.00"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "Denis"
+    ],
+    "createdAt": "2026-10-21T03:43:48.768Z",
+    "paymentType": "online",
+    "deliveryType": "ordinary",
+    "status": "accepted",
+    "paymentError": null,
+    "fullName": "",
+    "email": "",
+    "phone": "",
+    "city": "",
+    "address": "",
+    "totalCost": "170.00"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "Denis"
+    ],
+    "createdAt": "2026-10-21T09:10:38.947Z",
+    "paymentType": "online",
+    "deliveryType": "ordinary",
+    "status": "paid",
+    "paymentError": null,
+    "fullName": "Denis",
+    "email": "den_erof123@mail.ru",
+    "phone": "",
+    "city": "",
+    "address": "",
+    "totalCost": "450.00"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "erofeeva"
+    ],
+    "createdAt": "2026-10-21T20:59:01.579Z",
+    "paymentType": "online",
+    "deliveryType": "ordinary",
+    "status": "paid",
+    "paymentError": null,
+    "fullName": "anna",
+    "email": "erofeeva@store.local",
+    "phone": "",
+    "city": "",
+    "address": "",
+    "totalCost": "370.00"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "erofeeva"
+    ],
+    "createdAt": "2026-10-21T21:02:14.959Z",
+    "paymentType": "online",
+    "deliveryType": "ordinary",
+    "status": "accepted",
+    "paymentError": null,
+    "fullName": "",
+    "email": "",
+    "phone": "",
+    "city": "",
+    "address": "",
+    "totalCost": "450.00"
+  }
+}
+]

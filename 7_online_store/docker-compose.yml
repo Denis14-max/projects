@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: dockerhub.timeweb.cloud/library/postgres:15-alpine
+    container_name: megano_db
+    environment:
+      POSTGRES_DB: megano
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: megano_web
+    command: >
+      sh -c "python manage.py migrate && 
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8001:8000"
+    environment:
+      - DB_NAME=megano
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
