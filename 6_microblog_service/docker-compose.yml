@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: dockerhub.timeweb.cloud/library/postgres:15-alpine
+    container_name: microblog_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: microblog
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: microblog_web
+    ports:
+      - "8080:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/microblog
+    depends_on:
+      - db
+    restart: always
+
+volumes:
+  postgres_data:
